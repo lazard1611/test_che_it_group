@@ -1,4 +1,8 @@
 .btn_base {
 	@include btn_style_blue;
 	@include btn_size_normal;
+
+	@include bp($point_7) {
+		width: 100%;
+	}
 }
