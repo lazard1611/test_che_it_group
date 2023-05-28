@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-template-name="ui">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ui</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+  <link href="css/app.css" rel="stylesheet"></head>
+  <body>
+    <div class="preloader"></div>
+    <header class="header">
+      <div class="header__in">
+        <div class="header__row">
+          <div class="header__logo_wrap"><a class="header__logo" href="#"><img class="header__logo_img" src="images/logo.svg" alt="myv"></a></div>
+          <nav class="header__nav">
+            <ul class="header__nav_list">
+              <li class="header__nav_list_item">
+                <div class="drop">
+                  <button class="drop__btn js-drop-menu" type="button" aria-label="Програма МУВ"><span class="drop__btn_text">Програма МУВ<span class="base_icon drop__btn_icon">
+                        <svg class="icon icon_arrow-down icon--size_mod">
+                          <use xlink:href="images/sprite/sprite.svg#arrow-down"></use>
+                        </svg></span></span></button>
+                  <div class="drop_menu">
+                    <ul class="drop_menu__list">
+                      <li class="drop_menu__item"><a class="drop_menu__link" href="#">Про програму</a></li>
+                      <li class="drop_menu__item"><a class="drop_menu__link" href="#">Умови участі</a></li>
+                      <li class="drop_menu__item"><a class="drop_menu__link" href="#">Партнерство</a></li>
+                      <li class="drop_menu__item"><a class="drop_menu__link" href="#">Реєстрація</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="header__nav_list_item"><a class="header__nav_list_link" href="#">Можливості для молоді</a></li>
+              <li class="header__nav_list_item"><a class="header__nav_list_link" href="#">ВМЦ</a></li>
+              <li class="header__nav_list_item"><a class="header__nav_list_link" href="#">Блог</a></li>
+              <li class="header__nav_list_item"><a class="header__nav_list_link" href="#">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="header__lang_list">
+            <li class="header__lang_item">
+              <button class="header__lang_btn header__lang_btn--active_state" type="button"><img class="header__lang_img" src="images/ukraine.svg" alt="ukraine"></button>
+            </li>
+            <li class="header__lang_item">
+              <button class="header__lang_btn" type="button"><img class="header__lang_img" src="images/english.svg" alt="english"></button>
+            </li>
+          </ul>
+          <ul class="header__social_list">
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_facebook icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#facebook"></use>
+                  </svg>
+                </div></a></li>
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_insta icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#insta"></use>
+                  </svg>
+                </div></a></li>
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_telega icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#telega"></use>
+                  </svg>
+                </div></a></li>
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_youtube icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#youtube"></use>
+                  </svg>
+                </div></a></li>
+          </ul>
+          <button class="header__menu_trigger js-header-trigger" type="button" aria-label="Toggle menu"><span></span></button>
+        </div>
+      </div>
+      <div class="header_sidebar js-header-sidebar">
+        <div class="header_sidebar__top"><a class="header__logo" href="#"><img class="header__logo_img" src="images/logo.svg" alt="myv"></a>
+          <button class="header_sidebar__close js-header-trigger" type="button" aria-label="close">
+            <svg class="icon icon_close icon--size_mod">
+              <use xlink:href="images/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="header_sidebar__main">
+          <nav class="header_sidebar__nav">
+            <ul class="header_sidebar__list">
+              <li class="header_sidebar__item"><a class="header_sidebar__link js-header-sidebar-link header_sidebar__link--submenu_mod" href="#">Програма МУВ
+                  <div class="base_icon header_sidebar__link_icon">
+                    <svg class="icon icon_arrow-down icon--size_mod">
+                      <use xlink:href="images/sprite/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div></a>
+                <div class="submenu">
+                  <button class="submenu__title js-header-sidebar-submenu-close" type="button" aria-label="close"><span class="submenu__title_icon">
+                      <svg class="icon icon_arrow-down icon--size_mod">
+                        <use xlink:href="images/sprite/sprite.svg#arrow-down"></use>
+                      </svg></span>Програма МУВ</button>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Про програму</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Умови участі</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Партнерство</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Реєстрація</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header_sidebar__item"><a class="header_sidebar__link" href="#">Можливості для молоді</a>
+              </li>
+              <li class="header_sidebar__item"><a class="header_sidebar__link" href="#">ВМЦ</a>
+              </li>
+              <li class="header_sidebar__item"><a class="header_sidebar__link" href="#">Блог</a>
+              </li>
+              <li class="header_sidebar__item"><a class="header_sidebar__link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_sidebar__bottom">
+          <ul class="header__social_list">
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_facebook icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#facebook"></use>
+                  </svg>
+                </div></a></li>
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_insta icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#insta"></use>
+                  </svg>
+                </div></a></li>
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_telega icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#telega"></use>
+                  </svg>
+                </div></a></li>
+            <li class="header__social_item"><a class="header__social_link" href="#" target="_blank">
+                <div class="base_icon">
+                  <svg class="icon icon_youtube icon--size_mod">
+                    <use xlink:href="images/sprite/sprite.svg#youtube"></use>
+                  </svg>
+                </div></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="base">
+        <section class="section section_ui">
+          <div class="section_in">
+            <div class="section_ui__block">
+              <h1 class="section_ui__title">Ui page</h1>
+              <div class="section_ui__text">This page is for showing project titles, buttons, forms, components.</div>
+            </div>
+            <div class="section_ui__block">
+              <h3 class="section_ui__category">Typography</h3>
+              <div class="section_ui__text">This section contains all text elements: titles, texts.</div>
+              <div class="ui_typography__line">
+                <div class="ui_typography__item">Text style</div>
+                <div class="ui_typography__item">Size</div>
+                <div class="ui_typography__item">Weight</div>
+              </div>
+              <ul class="ui_typography">
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <h1 class="ui_typography__title">h1</h1>
+                  </div>
+                  <div class="ui_typography__item">72</div>
+                  <div class="ui_typography__item">700</div>
+                </li>
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <h2 class="ui_typography__title">h2</h2>
+                  </div>
+                  <div class="ui_typography__item">56</div>
+                  <div class="ui_typography__item">700</div>
+                </li>
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <h3 class="ui_typography__title">h3</h3>
+                  </div>
+                  <div class="ui_typography__item">40</div>
+                  <div class="ui_typography__item">500</div>
+                </li>
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <h4 class="ui_typography__title">h4</h4>
+                  </div>
+                  <div class="ui_typography__item">32</div>
+                  <div class="ui_typography__item">400</div>
+                </li>
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <h5 class="ui_typography__title">h5</h5>
+                  </div>
+                  <div class="ui_typography__item">24</div>
+                  <div class="ui_typography__item">400</div>
+                </li>
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <h6 class="ui_typography__title">h6</h6>
+                  </div>
+                  <div class="ui_typography__item">20</div>
+                  <div class="ui_typography__item">400</div>
+                </li>
+                <li class="ui_typography__line">
+                  <div class="ui_typography__item">
+                    <div class="ui_typography__text">Text</div>
+                  </div>
+                  <div class="ui_typography__item">18</div>
+                  <div class="ui_typography__item">400</div>
+                </li>
+              </ul>
+            </div>
+            <div class="section_ui__block">
+              <h3 class="section_ui__category">Buttons</h3>
+              <div class="section_ui__text">This section contains all buttons.</div>
+<ul class="ui_buttons">
+  <li class="ui_buttons__item"><a class="ui_buttons__btn section_ui__btn--mod_1" href="">Button 1</a></li>
+  <li class="ui_buttons__item"><a class="ui_buttons__btn section_ui__btn--mod_2" href="">Button 2</a></li>
+  <li class="ui_buttons__item"><a class="ui_buttons__btn section_ui__btn--mod_3" href="">Button 3</a></li>
+</ul>
+            </div>
+            <div class="section_ui__block">
+              <h3 class="section_ui__category">Forms</h3>
+              <div class="section_ui__text">This section contains all form items: inputs, selects, textareas, checkboxes, radio buttons.</div>
+              <form class="ui_form">
+                <ul class="ui_form__list">
+                  <li class="ui_form__item">
+                    <div class="form_input">
+                      <label class="form_input__label" for="input_1">Default input 1</label>
+                      <div class="form_input__field">
+                        <input class="form_input__element" type="text" id="input_1" placeholder="Placeholder" value="">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ui_form__item">
+                    <div class="form_input">
+                      <label class="form_input__label" for="input_1">Default input 2</label>
+                      <div class="form_input__field">
+                        <input class="form_input__element" type="text" id="input_1" placeholder="Placeholder" value="">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ui_form__item ui_form__item--full_mod">
+                    <div class="form_textarea">
+                      <label class="form_textarea__label" for="textarea_1">Default textarea</label>
+                      <div class="form_textarea__field">
+                        <textarea class="form_textarea__element" placeholder="Placeholder"></textarea>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ui_form__item">
+                    <div class="form_select">
+                      <label class="form_select__label" for="select_1">Default select 1</label>
+                      <div class="form_select__field">
+                        <select class="form_select__element">
+                          <option value='{"title":"item"}'>item</option>
+                          <option value='{"title":"value"}'>value</option>
+                          <option value='{"title":"hello"}'>hello</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ui_form__item">
+                    <div class="form_select">
+                      <label class="form_select__label" for="select_1">Default select 2</label>
+                      <div class="form_select__field">
+                        <select class="form_select__element">
+                          <option value='{"title":"item"}'>item</option>
+                          <option value='{"title":"value"}'>value</option>
+                          <option value='{"title":"hello"}'>hello</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ui_form__item">
+                    <div class="ui_form__title">Checkboxes</div>
+                    <div class="ui_form__subitem">
+                      <div class="form_checkbox">
+                        <label class="form_checkbox__block">
+                          <input class="form_checkbox__element" type="checkbox"><span class="form_checkbox__label">checkbox label 1</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="ui_form__subitem">
+                      <div class="form_checkbox">
+                        <label class="form_checkbox__block">
+                          <input class="form_checkbox__element" type="checkbox"><span class="form_checkbox__label">checkbox label 2</span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ui_form__item">
+                    <div class="ui_form__title">Radio buttons</div>
+                    <div class="ui_form__subitem">
+                      <div class="form_radio">
+                        <label class="form_radio__block">
+                          <input class="form_radio__element" type="radio" name="radio_1"><span class="form_radio__label">radio label 1</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="ui_form__subitem">
+                      <div class="form_radio">
+                        <label class="form_radio__block">
+                          <input class="form_radio__element" type="radio" name="radio_1"><span class="form_radio__label">radio label 2</span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="section_ui__block">
+              <h3 class="section_ui__category">Components</h3>
+              <div class="section_ui__text">This section contains all components.</div>
+              <ul class="ui_components">
+                <li class="ui_components__item">
+                  <h4 class="ui_components__title">Component name (include)</h4>
+                </li>
+                <li class="ui_components__item">
+                  <h4 class="ui_components__title">Component name (mixin)</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--+footer-->
+    </div>
+  <script defer src="js/app.js"></script></body>
+</html>
