@@ -49,7 +49,7 @@ mixin header
 				ul.header__social_list
 					each item in socialList
 						li.header__social_item
-							a.header__social_link(href= '#' target='_blank')
+							a.header__social_link(href= '#' target='_blank' aria-label= item)
 								.base_icon
 									+icon(item)
 				button.header__menu_trigger.js-header-trigger(type="button" aria-label="Toggle menu")

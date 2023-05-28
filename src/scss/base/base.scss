@@ -26,8 +26,7 @@ html {
 	font-weight: 400;
 
 	@include bp(1440px, min) {
-		//font-size: calc(100vw / 1440 * 10);
-		font-size: 10px;
+		font-size: calc(100vw / 1440 * 10);
 	}
 
 	@include bp(1439px, $point_2) {
