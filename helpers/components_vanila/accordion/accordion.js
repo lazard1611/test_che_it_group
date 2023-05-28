@@ -107,10 +107,10 @@ export default class Accordion {
 // copy past this
 
 // import this and if u need fix path
-// import Accordion from './components/accordion';
+// import FaqBlock from './components/accordion';
 
 // add it in loadFunc
-// const acc = new Accordion({
+// const acc = new FaqBlock({
 // 	triggers: document.querySelectorAll('.accordion__item_head'), // eslint-disable-line
 // 	activeStateName: 'accordion__item--active-mod' // eslint-disable-line
 // }).init();

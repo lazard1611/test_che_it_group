@@ -1,0 +1,33 @@
+.header_sidebar.js-header-sidebar
+	.header_sidebar__top
+		a.header__logo(href='#')
+			img.header__logo_img(src='images/logo.svg' alt='myv')
+		button.header_sidebar__close.js-header-trigger(type='button' aria-label='close')
+			+icon('close')
+
+	.header_sidebar__main
+		nav.header_sidebar__nav
+			ul.header_sidebar__list
+				each item in headerNav
+					li.header_sidebar__item
+						a.header_sidebar__link(href='#' class=`${item.dropdown ? 'js-header-sidebar-link header_sidebar__link--submenu_mod' : ''}`)!= item.link
+							if item.dropdown
+								.base_icon.header_sidebar__link_icon
+									+icon('arrow-down')
+						if item.dropdown
+							.submenu
+								button.submenu__title.js-header-sidebar-submenu-close(type='button' aria-label='close')
+									span.submenu__title_icon
+										+icon('arrow-down')
+									| Програма МУВ
+								ul.submenu__list
+									each item in dropList
+										li.submenu__item
+											a.submenu__link(href= `${item.url ? item.url : '#'}`)!= item.desc_title
+	.header_sidebar__bottom
+		ul.header__social_list
+			each item in socialList
+				li.header__social_item
+					a.header__social_link(href= '#' target='_blank')
+						.base_icon
+							+icon(item)

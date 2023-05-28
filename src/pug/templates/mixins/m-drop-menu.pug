@@ -1,0 +1,16 @@
+mixin drop_menu(data)
+	.drop
+		button.drop__btn.js-drop-menu(
+			type='button',
+			aria-label=data.title
+		)
+			span.drop__btn_text!= data.title
+				span.base_icon.drop__btn_icon
+					+icon('arrow-down')
+		.drop_menu
+			if data.list
+				ul.drop_menu__list
+					each item in data.list
+						- url = item.url || '#';
+						li.drop_menu__item(class=`${item.active ? `drop_menu__item--active_mod` : ''}`)
+							a.drop_menu__link(href=url)!= item.desc_title

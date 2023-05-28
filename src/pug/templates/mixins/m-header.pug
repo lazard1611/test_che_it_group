@@ -1,2 +1,58 @@
+include m-drop-menu
+-
+	headerNav= [
+		{link: 'Програма МУВ', dropdown: true },
+		{link: 'Можливості для молоді'},
+		{link: 'ВМЦ'},
+		{link: 'Блог'},
+		{link: 'Контакти'},
+	]
+
+	dropList = [
+		{desc_title: 'Про програму'},
+		{desc_title: 'Умови участі'},
+		{desc_title: 'Партнерство'},
+		{desc_title: 'Реєстрація'},
+	]
+
+	socialList= [
+		'facebook',
+		'insta',
+		'telega',
+		'youtube',
+	]
+
 mixin header
 	header.header
+		.header__in
+			.header__row
+				.header__logo_wrap
+					a.header__logo(href='#')
+						img.header__logo_img(src='images/logo.svg' alt='myv')
+				nav.header__nav
+					ul.header__nav_list
+						each item in headerNav
+							if item.dropdown
+								li.header__nav_list_item
+									+drop_menu({
+										title: item.link,
+										list: dropList
+									})
+							else
+								li.header__nav_list_item
+									a.header__nav_list_link(href= '#')!= item.link
+				ul.header__lang_list
+					each item, index in ['ukraine', 'english']
+						li.header__lang_item
+							button.header__lang_btn(type='button' class=`${index== 0 ? 'header__lang_btn--active_state': ''}`)
+								img.header__lang_img(src=`images/${item}.svg` alt= item)
+				ul.header__social_list
+					each item in socialList
+						li.header__social_item
+							a.header__social_link(href= '#' target='_blank')
+								.base_icon
+									+icon(item)
+				button.header__menu_trigger.js-header-trigger(type="button" aria-label="Toggle menu")
+					span
+
+		include ../../blocks/header-sidebar

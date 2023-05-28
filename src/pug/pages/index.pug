@@ -1,8 +1,30 @@
 extends ../layout/layout
 
 block vars
-	//- include ../templates/project-vars
+	include ../templates/mixins/m-faq
+	include ../templates/project-vars
+
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index', template_name: 'index'}
 
 block content_block
-	section.section
+	section.section.hero.js-animation
+		.section_in
+			.hero__wrap
+				.hero__row
+					.hero__col.hero__col--pic_mod
+						.hero__pic.js-fade-pic
+							include ../blocks/images-svg
+					.hero__col.hero__col--content_mod
+						.hero__content
+							.hero__subtitle.js-fade Національна програма мобільності молоді
+							h1.hero__title.js-fade Мандруй! Уявляй! Відкривай!
+							.hero__description.js-fade
+								p Найбільша в Центральній та Східній Європі 7-денна програма внутрішніх обмінів для молоді віком від 14 до 21 року. Її ініціатором є Міністерство культури, молоді та спорту України, в основу діяльності якого покладені демократичні цінності та принципи всебічного розвитку особистості.
+							a.btn_base(href='#').js-fade Стати учасником програми МУВ
+	section.section.faq.js-animation
+		.section_in.faq__in
+			h2.faq__title faq
+			.faq__descrip Clicca sulle domande per aprire e leggere le risposte.
+			.faq__wrap
+				each item in faqList
+					+faq_item(item)

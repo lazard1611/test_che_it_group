@@ -1,3 +1,4 @@
-// .btn_base {
-
-// }
+.btn_base {
+	@include btn_style_blue;
+	@include btn_size_normal;
+}

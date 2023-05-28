@@ -7,14 +7,40 @@
 :root {
 	--full-screen: calc(var(--vh, 1vh) * 100);
 
-	--height-header: 10rem;
+	--height-header: 6.2rem;
 	--height-footer: 10rem;
-	--gl-indent: 5rem;
+
+	@include bp($point_2, min) {
+		--gl-indent: 5rem;
+	}
+
+	@include bp($point_3) {
+		--gl-indent: 2rem;
+	}
 }
 
 html {
 	height: 100%;
-	font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+	font-family: $font_1;
+	line-height: 1.28;
+	font-weight: 400;
+
+	@include bp(1440px, min) {
+		//font-size: calc(100vw / 1440 * 10);
+		font-size: 10px;
+	}
+
+	@include bp(1439px, $point_2) {
+		font-size: calc(100vw / 1200 * 10);
+	}
+
+	@include bp($point_3, $point_7) {
+		font-size: 10px;
+	}
+
+	@include bp($point_7 - 1) {
+		font-size: calc(100vw / 375 * 10);
+	}
 }
 
 body {
@@ -34,6 +60,11 @@ body {
 
 	@supports (display: grid) {
 		display: block;
+	}
+
+	&.body--popup_open,
+	&.body--open_menu_state {
+		overflow: hidden;
 	}
 }
 
@@ -82,8 +113,13 @@ a {
 
 	&:hover,
 	&:focus {
-		text-decoration: underline;
+		text-decoration: none;
 	}
+}
+
+.base_icon {
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 //------------------------------------------------------------base styles###

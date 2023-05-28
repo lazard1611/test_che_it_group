@@ -1,5 +1,7 @@
 import layout from 'layout/layout';
 import { pageLoad } from './utils';
+import header from './components/header';
+import animation from './components/animation';
 
 export default class App {
 	constructor() {
@@ -32,6 +34,8 @@ export default class App {
 		const initLayout = layout();
 		pageLoad(() => {
 			document.body.classList.add('body--loaded');
+			header();
+			animation();
 		});
 		setTimeout(() => {
 			this.importPage();
