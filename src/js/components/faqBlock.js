@@ -11,24 +11,30 @@ const faqBlock = () => {
 	const $items = document.querySelectorAll(SELECTORS.item);
 	if (!$items.length) return;
 
+	const closeAcc = (el, body) => {
+		el.classList.remove(CLASSES.itemOpen);
+		body.style.maxHeight = null; // eslint-disable-line no-param-reassign
+	};
+
 	const openAcc = (el, body) => {
+		$items.forEach(($item) => {
+			$item.classList.remove(CLASSES.itemOpen);
+			const $body = $item.querySelector(SELECTORS.body);
+			if (!$body) return;
+			$body.style.maxHeight = null; // eslint-disable-line no-param-reassign
+		});
 		setTimeout(() => {
 			el.classList.add(CLASSES.itemOpen);
 			body.style.maxHeight = body.scrollHeight + 'px'; // eslint-disable-line
 		}, 100);
 	};
 
-	const closeAcc = (el, body) => {
-		el.classList.remove(CLASSES.itemOpen);
-		body.style.maxHeight = null; // eslint-disable-line no-param-reassign
-	};
-
 	$items.forEach(($item) => {
-		const $body = $item.querySelector(SELECTORS.body);
-		if (!$body) return;
+		$item.addEventListener('click', (el) => {
+			const $body = $item.querySelector(SELECTORS.body);
+			if (!$body) return;
 
-		$item.addEventListener('click', (e) => {
-			if ($item.classList.contains(CLASSES.itemOpen)) {
+			if ($item.closest(`.${CLASSES.itemOpen}`)) {
 				closeAcc($item, $body);
 			} else {
 				openAcc($item, $body);

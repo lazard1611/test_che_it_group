@@ -1,6 +1,0 @@
-mixin faq_item(data)
-	button.faq_item.js-faq-item.js-fade(aria-label="accordion item" class=`${data.active ? 'faq_item--open_state' : ''}`)
-		span.faq_item__title!=data.title
-			span.faq_item__title_icon
-		span.faq_item__answer.js-faq-body
-			span.faq_item__answer_in!= data.descr

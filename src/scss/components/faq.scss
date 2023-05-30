@@ -28,16 +28,20 @@
 	padding: 1.8rem 6rem 1.6rem 2rem;
 	background-color: $white;
 	border-radius: 1.5rem;
-
-	cursor: pointer;
+	transition: box-shadow 0.3s ease;
 
 	&:not(:last-child) {
 		margin-bottom: 1.8rem;
+	}
+
+	&.faq_item--open_state {
+		box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
 	}
 }
 
 .faq_item__title {
 	display: block;
+	width: 100%;
 	position: relative;
 	font-weight: 500;
 	font-family: $font_1;
@@ -46,6 +50,7 @@
 	line-height: 1.25;
 
 	color: $dark_blue;
+	cursor: pointer;
 }
 
 .faq_item__title_icon {
@@ -67,11 +72,11 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		left: .4rem;
+		left: 0.4rem;
 
 		display: block;
 		width: 1.2rem;
-		height: .1rem;
+		height: 0.1rem;
 		background-color: $blue;
 
 		content: '';
@@ -136,4 +141,3 @@
 		}
 	}
 }
-
