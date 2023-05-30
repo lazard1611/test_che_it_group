@@ -1,8 +1,0 @@
-mixin accordion(data)
-	.faq__wrap
-		each item in data
-			button.faq_item(aria-label="accordion item" class=`${item.active ? 'faq_item--open_state' : ''}`)
-				span.faq_item__title.js-faq-item-head!=item.title
-					span.faq_item__title_icon
-				span.faq_item__answer.js-faq-body
-					span.faq_item__answer_in!= item.descr

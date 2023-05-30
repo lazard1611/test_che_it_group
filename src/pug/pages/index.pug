@@ -2,7 +2,6 @@ extends ../layout/layout
 
 block vars
 	include ../templates/mixins/m-faq-items
-	include ../templates/mixins/m-accordion
 	include ../templates/project-vars
 
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index', template_name: 'index'}
@@ -13,8 +12,13 @@ block content_block
 			.hero__wrap
 				.hero__row
 					.hero__col.hero__col--pic_mod
-						.hero__pic.js-fade-pic
-							include ../blocks/images-svg
+						+picture({
+							img: 'hero.png',
+							class: 'hero__pic js-fade-pic',
+							img_class: 'hero__pic_img',
+						})
+						//.hero__pic.js-fade-pic
+						//	include ../blocks/images-svg
 					.hero__col.hero__col--content_mod
 						.hero__content
 							.hero__subtitle.js-fade Національна програма мобільності молоді
